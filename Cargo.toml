@@ -7,5 +7,7 @@ edition = "2021"
 
 [dependencies]
 embedded-hal = "1.0.0"
+envconfig = "0.10.0"
+strum = { version = "0.26", features = ["derive"] }
 linux-embedded-hal = "0.4.0"
 prometheus_exporter = "0.8.5"

@@ -11,6 +11,7 @@ extern crate embedded_hal as hal;
 
 use hal::delay::DelayNs;
 use hal::i2c::I2c;
+use strum::EnumString;
 
 #[allow(dead_code)]
 #[derive(Copy, Clone)]
@@ -50,13 +51,16 @@ impl Command {
 }
 
 /// Measurement resolution
-#[derive(Clone, Copy)]
+#[derive(Clone, Copy, EnumString)]
 pub enum Resolution {
     /// Resolution of 0.5 lx.
+    #[strum(serialize = "0.5")]
     Lx0_5,
     /// Resolution of 1.0 lx.
+    #[strum(serialize = "1.0")]
     Lx1_0,
     /// Resolution of 4.0 lx.
+    #[strum(serialize = "4.0")]
     Lx4_0,
 }
 
