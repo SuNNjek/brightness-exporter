@@ -1,5 +1,5 @@
 # Build application
-FROM rust:1.77-slim-bullseye as builder
+FROM rust:1.77-slim-bookworm as builder
 
 WORKDIR /app
 COPY . .
@@ -8,7 +8,7 @@ RUN cargo build --release
 
 
 # Copy application into Debian image
-FROM debian:bullseye-slim
+FROM gcr.io/distroless/cc-debian12
 
 EXPOSE 9186
 
