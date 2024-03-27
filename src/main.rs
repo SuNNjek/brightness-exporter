@@ -15,7 +15,7 @@ struct Config {
     #[envconfig(from = "SENSOR_RESOLUTION", default = "1.0")]
     pub resolution: Resolution,
 
-    #[envconfig(from = "SENSOR_MEASUREMENT_TIME", default = "69")]
+    #[envconfig(from = "SENSOR_MEASUREMENT_TIME", default = "69")] // Nice
     pub measurement_time: u8,
 
     #[envconfig(from = "SERVER_PORT", default = "9186")]
